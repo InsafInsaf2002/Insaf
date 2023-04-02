@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLDocumentController">
+   <children>
+      <BorderPane fx:id="login_form" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <left>
+            <AnchorPane prefHeight="445.0" prefWidth="312.0" style="-fx-background-color: #41b3a3;">
+               <effect>
+                  <DisplacementMap>
+                     <mapData>
+                        <FloatMap />
+                     </mapData>
+                  </DisplacementMap>
+               </effect>
+               <children>
+                  <Text layoutX="27.0" layoutY="182.0" rotate="-20.6" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="60.0" />
+                     </font>
+                     <fill>
+                        <RadialGradient centerX="0.09629634221394862" centerY="0.6174603416806176" focusAngle="3.39" radius="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Text>
+                  <Text layoutX="98.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register account" />
+                  <Button fx:id="su_createAccountBtn" layoutX="79.0" layoutY="353.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="33.0" prefWidth="131.0" text="Create account">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="445.0" prefWidth="319.0" BorderPane.alignment="CENTER">
+               <children>
+                  <FontAwesomeIconView glyphName="USER" layoutX="139.0" layoutY="75.0" size="40" />
+                  <Text fill="#41b3a3" fontSmoothingType="LCD" layoutX="71.0" layoutY="107.0" lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login user form" textAlignment="CENTER">
+                     <font>
+                        <Font name="Candara" size="26.0" />
+                     </font>
+                     <effect>
+                        <ColorAdjust brightness="-0.05" />
+                     </effect>
+                  </Text>
+                  <FontAwesomeIconView glyphName="USER" layoutX="34.0" layoutY="182.0" size="22" />
+                  <FontAwesomeIconView glyphName="LOCK" layoutX="35.0" layoutY="230.0" size="22" />
+                  <TextField fx:id="si_username" layoutX="59.0" layoutY="162.0" prefHeight="25.0" prefWidth="198.0" promptText="username">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <PasswordField fx:id="si_password" layoutX="59.0" layoutY="207.0" prefHeight="25.0" prefWidth="198.0" promptText="password">
+                     <font>
+                        <Font size="14.0" />
+                     </font></PasswordField>
+                  <Button fx:id="su_loginBtn" layoutX="108.0" layoutY="281.0" mnemonicParsing="false" onAction="#loginAccount" prefHeight="22.0" prefWidth="95.0" style="-fx-background-color: #41b3a3;" text="Login">
+                     <font>
+                        <Font name="Candara" size="16.0" />
+                     </font>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     <textFill>
+                        <RadialGradient centerX="0.5333333757188585" centerY="0.6174603416806176" radius="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="signup_form" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <AnchorPane prefHeight="445.0" prefWidth="312.0" style="-fx-background-color: #41b3a3;">
+               <effect>
+                  <DisplacementMap>
+                     <mapData>
+                        <FloatMap />
+                     </mapData>
+                  </DisplacementMap>
+               </effect>
+               <children>
+                  <Text layoutX="27.0" layoutY="182.0" rotate="-20.6" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="60.0" />
+                     </font>
+                     <fill>
+                        <RadialGradient centerX="0.09629634221394862" centerY="0.6174603416806176" focusAngle="3.39" radius="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Text>
+                  <Text layoutX="81.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="already have an account" />
+                  <Button fx:id="su_loginAccountBtn" layoutX="79.0" layoutY="353.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="33.0" prefWidth="131.0" text="Login account">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="445.0" prefWidth="319.0" BorderPane.alignment="CENTER">
+               <children>
+                  <FontAwesomeIconView glyphName="USER_PLUS" layoutX="139.0" layoutY="75.0" size="40" />
+                  <Text fill="#41b3a3" fontSmoothingType="LCD" layoutX="71.0" layoutY="107.0" lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register user form" textAlignment="CENTER">
+                     <font>
+                        <Font name="Candara" size="26.0" />
+                     </font>
+                     <effect>
+                        <ColorAdjust brightness="-0.05" />
+                     </effect>
+                  </Text>
+                  <FontAwesomeIconView glyphName="USER" layoutX="34.0" layoutY="182.0" size="22" />
+                  <FontAwesomeIconView glyphName="LOCK" layoutX="35.0" layoutY="230.0" size="22" />
+                  <TextField fx:id="su_username" layoutX="59.0" layoutY="162.0" prefHeight="25.0" prefWidth="198.0" promptText="username">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="su_password" layoutX="59.0" layoutY="207.0" prefHeight="25.0" prefWidth="198.0" promptText="password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <Button fx:id="su_signupBtn" layoutX="108.0" layoutY="281.0" mnemonicParsing="false" onAction="#registerAccount" prefHeight="22.0" prefWidth="95.0" style="-fx-background-color: #41b3a3;" text="Sign up">
+                     <font>
+                        <Font name="Candara" size="16.0" />
+                     </font>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     <textFill>
+                        <RadialGradient centerX="0.5333333757188585" centerY="0.6174603416806176" radius="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
